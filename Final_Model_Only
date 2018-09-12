@@ -1,0 +1,5 @@
+%let FinalModVar =  CC CD DDA DEP INV IRA MM MTG TELLER SAVBAl PHONE ATMAMT;
+/*Final Model*/
+proc logistic data=logistic.insurance_t;
+	model INS(event='1') = &FinalModVar;
+run;
